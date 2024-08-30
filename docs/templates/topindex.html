@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+{% set title = _('Overview') %}
+{% block body %}
+
+  <h1>MicroPython 文档（中文）</h1>
+
+  <p>
+    {{ _('欢迎! 你在浏览的是MicroPython文档（中文），由01Studio团队实时维护更新。') }}
+    v{{ release|e }}{% if last_updated %}, {{ _('last updated') }} {{ last_updated|e }}{% endif %}.
+  </p>
+
+  <p>
+    MicroPython 可以在一系列系统和硬件上运行。在这里你可以阅读到适用于各个系统的通用性文档，以及各个运行MicroPython硬件平台的相关文档。
+    也称为 <a href="{{ pathto("reference/glossary") }}#term-micropython-port">ports</a>
+  </p>
+
+  <p><strong>MicroPython通用文档:</strong></p>
+
+  <table class="contentstable"><tr>
+    <td width="40%" style="padding-left:2em;">
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("library/index") }}">相关库</a><br/>
+        <span class="linkdescr">MicroPython的库和模块</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("genrst/index") }}">MicroPython 区别</a><br/>
+        <span class="linkdescr">MicroPython与CPython的区别</span>
+      </p>
+    </td>
+    <td width="40%" style="padding-left:2em;">
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("reference/index") }}">相关语言</a><br/>
+        <span class="linkdescr">MicroPython 语言特征</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("license") }}">许可证</a><br/>
+        <span class="linkdescr">MicroPython 许可证信息</span>
+      </p>
+    </td>
+  </tr></table>
+
+  <p><strong>特定平台的参考手册和教程:</strong></p>
+
+  <table class="contentstable"><tr>
+    <td width="40%" style="padding-left:2em;">
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("pyboard/quickref") }}">pyboard 快速参考手册</a><br/>
+        <span class="linkdescr">pyboard的引脚排列，重要代码片段和教程</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("esp8266/quickref") }}">ESP8266 快速参考手册</a><br/>
+        <span class="linkdescr">ESP8266开发板引脚排列，重要代码片段和教程</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("esp32/quickref") }}">ESP32 快速参考手册</a><br/>
+        <span class="linkdescr">ESP32开发板引脚排列，重要代码片段和教程</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("rp2/quickref") }}">Quick reference for the Raspberry Pi RP2xxx</a><br/>
+        <span class="linkdescr">pinout for rp2xxx-based boards, snippets of useful code, and a tutorial</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("wipy/quickref") }}">Quick reference for the WiPy/CC3200</a><br/>
+        <span class="linkdescr">pinout for the WiPy/CC3200, snippets of useful code, and a tutorial</span>
+
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("unix/quickref") }}">Quick reference for UNIX and Windows</a><br/>
+        <span class="linkdescr">command-line reference</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("zephyr/quickref") }}">Quick reference for the Zephyr port</a><br/>
+        <span class="linkdescr">snippets of useful code and a tutorial</span>
+      </p>
+    </td>
+  </tr></table>
+
+  <p><strong>索引和表格:</strong></p>
+
+  <table class="contentstable"><tr>
+    <td width="40%" style="padding-left:2em;">
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("py-modindex") }}">模块索引</a><br/>
+        <span class="linkdescr">快速查阅所有模块</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("genindex") }}">全部索引</a><br/>
+        <span class="linkdescr">所有函数、类和常量</span>
+      </p>
+    </td>
+    <td width="40%" style="padding-left:2em;">
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("reference/glossary") }}">词汇表</a><br/>
+        <span class="linkdescr">MicroPython 术语解释</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="{{ pathto("index") }}">目录</a><br/>
+        <span class="linkdescr">所有章节和小节的列表</span>
+      </p>
+    </td></tr>
+  </table>
+
+  <p><strong>外部链接:</strong></p>
+
+  <table class="contentstable"><tr>
+    <td width="40%" style="padding-left:2em;">
+      <p class="biglink">
+      <a class="biglink" href="http://01studio.org">01Studio homepage</a><br/>
+        <span class="linkdescr">01Studio 官网</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="http://bbs.01studio.org">01Studio 社区</a><br/>
+        <span class="linkdescr">讨论所有有关MicroPython的社区</span>
+      </p>
+    </td>
+    <td width="40%" style="padding-left:2em;">
+      <p class="biglink">
+        <a class="biglink" href="https://github.com/micropython">MicroPython on GitHub</a><br/>
+        <span class="linkdescr">在GitHub贡献代码</span>
+      </p>
+    </td>
+  </tr></table>
+
+{% endblock %}
